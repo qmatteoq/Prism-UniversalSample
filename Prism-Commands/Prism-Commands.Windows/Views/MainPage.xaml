@@ -1,0 +1,46 @@
+﻿<storeApps:VisualStateAwarePage
+    x:Class="Prism_Commands.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prism_Commands.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="120, 0, 0, 0">
+            <Button Content="Double tap me">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="DoubleTapped">
+                        <core:InvokeCommandAction Command="{Binding Path=DoubleTapCommand}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+
+            <!--Command with parameter-->
+            <Button Content="Command with parameter" Command="{Binding Path=DisplayMessageCommand}" CommandParameter="Text passed as parameter" />
+
+            <!--Command with event handler arguments-->
+            <ListView ItemsSource="{Binding Path=News}" SelectionMode="Single" IsItemClickEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}" 
+                       TextWrapping="Wrap" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="ItemClick">
+                        <core:InvokeCommandAction Command="{Binding Path=ShowDetailCommand}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</storeApps:VisualStateAwarePage>
