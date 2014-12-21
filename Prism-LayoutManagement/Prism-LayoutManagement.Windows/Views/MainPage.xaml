@@ -1,0 +1,21 @@
+﻿<storeApps:VisualStateAwarePage
+    x:Class="Prism_LayoutManagement.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prism_LayoutManagement.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    mc:Ignorable="d"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <StackPanel>
+            <Button Content="Go to portrait page" Command="{Binding Path=GoToPortraitPageCommand}" />
+            <Button Content="Go to minimum width page"  Command="{Binding Path=GoToMinimumWidthPageCommand}" />
+        </StackPanel>
+    </Grid>
+</storeApps:VisualStateAwarePage>

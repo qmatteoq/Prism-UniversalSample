@@ -43,10 +43,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism-Messages.Windows", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism-Messages.WindowsPhone", "Prism-Messages\Prism-Messages.WindowsPhone\Prism-Messages.WindowsPhone.csproj", "{516CF583-360A-4DCA-8205-5B10071B2BB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prism-LayoutManagement", "Prism-LayoutManagement", "{259CBF10-1A06-43A6-9E0A-4CC9B717E15D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Prism-LayoutManagement.Shared", "Prism-LayoutManagement\Prism-LayoutManagement.Shared\Prism-LayoutManagement.Shared.shproj", "{FC6B7524-61C0-4226-B03D-C157C4CC49C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism-LayoutManagement.Windows", "Prism-LayoutManagement\Prism-LayoutManagement.Windows\Prism-LayoutManagement.Windows.csproj", "{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Prism-Messages\Prism-Messages.Shared\Prism-Messages.Shared.projitems*{80981e71-1acb-414b-87ca-01ec454b900d}*SharedItemsImports = 4
 		Prism-BasicDemo\PrismDemo.Shared\PrismDemo.Shared.projitems*{6c662663-219a-4fd5-ae86-d67e44c1a233}*SharedItemsImports = 4
+		Prism-LayoutManagement\Prism-LayoutManagement.Shared\Prism-LayoutManagement.Shared.projitems*{bb31bfb9-bf53-4f24-952b-dcb6f14ff04b}*SharedItemsImports = 4
 		Prism-Commands\Prism-Commands.Shared\Prism-Commands.Shared.projitems*{14583505-a831-4e52-b1ab-64e25cdef5eb}*SharedItemsImports = 4
 		Prism-Commands\Prism-Commands.Shared\Prism-Commands.Shared.projitems*{da7f07b7-fd58-4d76-ae4c-c76f11a90435}*SharedItemsImports = 13
 		Prism-StateManagement\Prism-StateManagement.Shared\Prism-StateManagement.Shared.projitems*{32872943-5300-4160-b46d-8350b5107cc2}*SharedItemsImports = 13
@@ -57,6 +64,7 @@ Global
 		Prism-Commands\Prism-Commands.Shared\Prism-Commands.Shared.projitems*{80c3e429-1a53-4007-b78d-ba8c86799784}*SharedItemsImports = 4
 		Prism-Navigation\Prism-Navigation.Shared\Prism-Navigation.Shared.projitems*{74f228f5-ca33-4266-911c-8ec16c207f80}*SharedItemsImports = 13
 		Prism-Messages\Prism-Messages.Shared\Prism-Messages.Shared.projitems*{516cf583-360a-4dca-8205-5b10071b2bb2}*SharedItemsImports = 4
+		Prism-LayoutManagement\Prism-LayoutManagement.Shared\Prism-LayoutManagement.Shared.projitems*{fc6b7524-61c0-4226-b03d-c157c4cc49c7}*SharedItemsImports = 13
 		Prism-BasicDemo\PrismDemo.Shared\PrismDemo.Shared.projitems*{ec18609c-aa4a-4b5f-ac94-3c2c0655a72f}*SharedItemsImports = 13
 		Prism-StateManagement\Prism-StateManagement.Shared\Prism-StateManagement.Shared.projitems*{d810d4f0-8b76-473e-8642-2df3c9aa3bd9}*SharedItemsImports = 4
 		Prism-Navigation\Prism-Navigation.Shared\Prism-Navigation.Shared.projitems*{c287b3d7-0d4e-45aa-b155-b0d737085e3c}*SharedItemsImports = 4
@@ -312,6 +320,30 @@ Global
 		{516CF583-360A-4DCA-8205-5B10071B2BB2}.Release|x86.ActiveCfg = Release|x86
 		{516CF583-360A-4DCA-8205-5B10071B2BB2}.Release|x86.Build.0 = Release|x86
 		{516CF583-360A-4DCA-8205-5B10071B2BB2}.Release|x86.Deploy.0 = Release|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|ARM.Build.0 = Debug|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x64.ActiveCfg = Debug|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x64.Build.0 = Debug|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x64.Deploy.0 = Debug|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x86.ActiveCfg = Debug|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x86.Build.0 = Debug|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Debug|x86.Deploy.0 = Debug|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|ARM.ActiveCfg = Release|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|ARM.Build.0 = Release|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|ARM.Deploy.0 = Release|ARM
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x64.ActiveCfg = Release|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x64.Build.0 = Release|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x64.Deploy.0 = Release|x64
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x86.ActiveCfg = Release|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x86.Build.0 = Release|x86
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -332,5 +364,7 @@ Global
 		{F6D5A9B3-688A-4C42-B088-9C5C73D1D07D} = {EDDAC67C-FB6C-45C8-9326-BF8C984BA7A0}
 		{80981E71-1ACB-414B-87CA-01EC454B900D} = {EDDAC67C-FB6C-45C8-9326-BF8C984BA7A0}
 		{516CF583-360A-4DCA-8205-5B10071B2BB2} = {EDDAC67C-FB6C-45C8-9326-BF8C984BA7A0}
+		{FC6B7524-61C0-4226-B03D-C157C4CC49C7} = {259CBF10-1A06-43A6-9E0A-4CC9B717E15D}
+		{BB31BFB9-BF53-4F24-952B-DCB6F14FF04B} = {259CBF10-1A06-43A6-9E0A-4CC9B717E15D}
 	EndGlobalSection
 EndGlobal
