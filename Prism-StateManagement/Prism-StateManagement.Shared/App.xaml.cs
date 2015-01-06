@@ -33,6 +33,8 @@ namespace Prism_StateManagement
             _container.RegisterInstance<INavigationService>(NavigationService);
             // Register any app specific types with the container
 
+            _container.Resolve	<>()
+
             // Set a factory for the ViewModelLocator to use the container to construct view models so their 
             // dependencies get injected by the container
             ViewModelLocationProvider.SetDefaultViewModelFactory((viewModelType) => _container.Resolve(viewModelType));
